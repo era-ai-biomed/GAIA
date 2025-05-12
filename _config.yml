@@ -1,0 +1,25 @@
+title: GIGA Workshop
+description: Website for the GIGA Workshop
+theme: jekyll-theme-cayman
+baseurl: "/GIGA"
+url: "https://[your-username].github.io"
+
+# Social media
+twitter_username: 
+github_username: 
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/ 

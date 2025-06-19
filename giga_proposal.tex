@@ -1,0 +1,333 @@
+% WS proposal template for ICCV 2025
+% V. Albiero, J. Tompkin
+
+% Adopted from ECCV 2020, ECCV 2022, ICCV 2023 templates by M. Cho, B. Ham, A. Bartoli, A. Fusiello, A. Vedaldi, L. Karlinsky, T. Michaeli, K. Nishino
+
+
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{xspace}
+\usepackage{xcolor}
+\usepackage{geometry}
+\newgeometry{vmargin={30mm, 30mm}, hmargin={30mm,30mm}} 
+
+% 添加引用相关的包
+\usepackage{natbib}  % 文献引用包
+\bibliographystyle{unsrt}  % 或者 IEEEtran 等纯数字样式
+
+
+\newcommand\conf{ICCV 2025\xspace}
+\title{GAIA: Generative AI for Biomedical Image Analysis: \\ Opportunities, Challenges and Futures}
+\author{}
+\date{}
+
+% resizebox
+\usepackage{graphicx}
+\usepackage{adjustbox}
+\usepackage{booktabs}  % 用于更好的表格线
+\usepackage{multirow}  % 用于合并行
+\usepackage{array}     % 增强表格功能
+\usepackage{hyperref}  % 用于超链接
+\usepackage{xcolor}    % 用于颜色
+\usepackage{subcaption}
+
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+% instructions
+\def\c#1{\textcolor{gray}{#1}}
+% indicates parts to complete
+\def\x{\textcolor{red}{xxx}}
+\newcommand{\zd}[1]{\textcolor{blue}{[ZD: #1]}}
+
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  filecolor=magenta,
+  urlcolor=blue,
+}
+
+\begin{document}
+
+\maketitle
+
+
+% The instructions are in \c{grey} and parts to complete are indicated by \x. Submit your proposal as a single pdf file named \texttt{ACRONYM.pdf}, where \texttt{ACRONYM} is the acronym of your proposed workshop.
+
+\section{Summary}
+\small
+\begin{tabular}{lp{9cm}}
+  \hline
+  Workshop title & Generative AI for Biomedical Image Analysis:  Opportunities, Challenges and Futures \\
+  Acronym & GAIA \\
+  Edition (1st, 2nd, ...) & 1st \\
+  Keywords & Generative AI, Biomedical Image Analysis, Data Synthesis, Multimodal Learning, AI Agents\\
+  Primary contact name and email & yfj@stanford.edu \\
+  Half or full day & Half day \\
+  Anticipated audience size & 100-300 \\
+  Requested number of poster boards & 30 \\
+  Papers published in proceedings? & Yes \\
+  Special requests &  NA  \\
+  \hline
+\end{tabular}
+
+
+
+\section{Topic}
+% This workshop focuses on generative AI in biomedical image analysis.
+% %
+% Generative AI is transforming biomedical image analysis, enabling data synthesis, disease progression modeling, multimodal learning, and workflow automation. While artificial intelligence (AI) has significantly advanced medical imaging, diagnosis, and clinical decision-making, achieving reliable, clinically applicable AI systems in complex healthcare environments remains a challenge. This workshop aims to bring together experts from computer vision, healthcare, and AI research to discuss the opportunities and challenges in applying generative AI to biomedical image analysis, particularly in the following topics:
+% %
+
+% 1) In data synthesis and clinical modeling, generative models \cite{Chen2022, Kazerouni2023} have revolutionized both training data creation and disease progression simulation. These models synthesize anatomically plausible medical images \cite{2} that address class imbalance issues and facilitate cross-modal image synthesis between imaging modalities like MRI and CT \cite{5}. Beyond data augmentation, generative approaches enable disease progression modeling \cite{8}, allowing clinicians to visualize potential future states of patient conditions and evaluate treatment outcomes through counterfactual images \cite{9}. Conditional generative models have proven particularly valuable for medical image segmentation tasks \cite{11}, while synthetic lesion generation \cite{7} creates diverse training examples that improve model generalization across different pathologies. The ability to enhance image resolution and quality \cite{6} further supports precise diagnosis and measurement in clinical settings. 
+% % How about also pointing out the challenges?
+% However, ensuring clinical trustworthiness, data bias mitigation, and regulatory compliance remain significant challenges in deploying generative models in medical practice.
+
+% %
+% 2) In multimodal learning, the integration of generative AI with large language models (LLMs) opens new pathways for leveraging both visual and textual information in medical imaging \cite{12}. Multimodal models built on generative AI and LLMs can combine visual features from medical images with contextual information gathered from radiology reports or electronic health records (EHRs) \cite{13}. LLMs can process radiology reports to extract relevant information, associate it with corresponding images, and generate natural language summaries, enhancing communication among healthcare professionals and facilitating better patient care decisions \cite{14}. However, challenges remain in ensuring interpretability, mitigating hallucinations in AI-generated text, and aligning with clinical standards.
+% %
+
+% 3) In workflow automation, intelligent agents powered by generative AI are transforming the medical imaging pipeline from acquisition to diagnosis. These agents streamline routine tasks such as image preprocessing, quality control, and preliminary analysis, reducing radiologist workload by up to 30\% in preliminary studies \cite{Wang2024}. Generative models enable automated report generation from images, while reinforcement learning approaches help optimize scheduling and resource allocation in radiology departments. Furthermore, AI agents can continuously monitor imaging equipment performance, predict maintenance needs, and suggest protocol optimizations based on patient-specific factors. The integration of these agents into clinical workflows not only improves operational efficiency but also enhances diagnostic accuracy by ensuring consistent image quality and standardized analysis procedures across healthcare systems. 
+
+% %
+% However, challenges such as regulatory approval, data privacy, and AI model reliability must be addressed for broader adoption.
+% %
+% Our workshop brings together experts from computer vision, healthcare, and AI research to address the challenges and opportunities in applying generative AI to biomedical image analysis through interdisciplinary collaboration.
+
+
+% The scope of this workshop includes, but is not limited to:
+% \begin{itemize}
+%     \item Generative AI for biomedical image analysis
+%     \item Generative AI for medical data synthesis
+%     \item Multimodal models and general medical AI
+%     \item AI agents for healthcare
+%     \item Social impact and ethical issues of generative AI
+%     \item Current challenges and future trends in biomedical image analysis
+% \end{itemize}
+
+This workshop explores how generative AI is reshaping biomedical image analysis, creating new possibilities and solutions for healthcare. Although generative AI has significantly advanced medical imaging and diagnostics, developing reliable, clinically applicable systems remains challenging due to interpretability concerns, data quality issues, and regulatory compliance.
+%
+To address these challenges and explore emerging opportunities, this workshop will focus on three critical areas where generative AI is making substantial impacts:
+
+(1) \textit{Data Synthesis and Clinical Modeling}: 
+%
+Generative models revolutionize training data creation and disease simulation by producing anatomically accurate images, addressing class imbalances~\citep{chambon2022roentgen,wang2024self}, and enabling cross-modal image synthesis (e.g., MRI to CT)~\citep{gu2023biomedjourney}. 
+%
+These models also simulate disease progression, empowering clinicians to visualize patient outcomes and evaluate treatment effectiveness. 
+%
+Additionally, conditional generative models enhance segmentation accuracy, while synthetic lesion generation enriches training datasets~\citep{ktena2024generative}. 
+%
+Ensuring clinical reliability, reducing biases, and meeting regulatory standards remain essential challenges~\citep{hastings2024preventing}.
+
+(2) \textit{Multimodal Learning}: %
+Integrating generative AI with large language models (LLMs) combines visual data with insights from medical reports and electronic health records, enabling systems to extract crucial information and generate informative summaries~\citep{lu2024visual,xiang2025vision,lu2024multimodal}.
+%
+This fusion enhances clinical communication and supports improved decision-making.
+%
+However, significant challenges, such as interpretability, mitigating AI-generated inaccuracies, and aligning with clinical standards, must be addressed~\citep{kim2025medical}.
+
+(3) \textit{Workflow Automation}:
+%
+Generative AI streamlines medical imaging workflows from acquisition to diagnosis. Intelligent AI agents automate tasks such as routine medical inspections, automated image analysis, and automated delineation of radiotherapy target areas~\citep{gao2024empowering,xu2024transforming}.
+%
+These advancements can significantly improve efficiency and consistency in clinical practices. Nevertheless, challenges related to regulatory approval, data privacy, and model reliability persist.
+
+Our workshop brings together experts from computer vision, healthcare, and AI research to address these challenges and opportunities in applying generative AI to biomedical image analysis through interdisciplinary collaboration.
+%
+Topics covered include but are not limited to: Generative AI applications in biomedical image analysis; Medical data synthesis through generative AI; Multimodal models and their role in medical AI; AI-driven agents in healthcare environments; Ethical considerations and societal impacts of generative AI; Current obstacles and future directions in biomedical imaging research.
+
+
+
+
+
+\section{Organizers and speakers}
+
+
+\subsection{List of organizers}
+
+% Our team can organize this workshop with the following attributes. 
+% \begin{itemize}
+%     \item \textbf{Rich Organization Experience:}
+%     Most of our organizers have extensive experience leading workshops as chief organizers. For example: Haibao Yu (Chief organizer of cooperative intelligence workshop at ECCV2024), Jianing Qiu and Jiankai Sun (Chief organizer of healthcare robotics workshop at ICRA2024), Li Chen (Chief organizer of autonomous workshops at CVPR 2023/2024), Walter Zimmer (Chief organizer of data-driven autonomous driving workshop at ITSC2024), Shanghang Zhang (Chief organizer of human in the loop learning workshop at NeurIPs2022).
+%     \item \textbf{Professional Proficiency in Biomedical Image Analysis:}
+%     Mac Schwager (the director of the Multi-Robot Systems Lab at Stanford); Zaiqing Nie and Haibao Yu (contributors to datasets like the first real-world cooperative dataset DAIR-V2X); Walter Zimmer released six roadside infrastructure datasets for V2X research (TUM Traffic datasets); Li Chen's UniAD won Best Paper at CVPR 2023; Fei Gao has published several classical works about drones on Science Robotics, such as swarm of micro flying robots in the wild [20].
+%     \item \textbf{Diversity and Inclusiveness:}
+%     Our team spans different countries (China, USA, UK, Australia, Germany), with outstanding female members (Shanghang Zhang and Dan- dan Zhang); covers various research areas, including autonomous driving, robotics, and drones; encompasses diverse backgrounds, including industry (Zaiqing Nie, Haibao Yu, Li Chen, Walter Zimmer, Shanghang Zhang).
+% \end{itemize}
+% A brief introduction of the organizers is provided in Tab. \ref{tab:organizer_overview} with detailed biographies available in the following section.
+
+% \subsection{Biographies of organizers}
+\textbf{\href{https://example.com/haibao}{Yuanfeng Ji}} is a postdoctoral researcher at Stanford University specializing in artificial intelligence for healthcare. His work focuses on developing deep learning methods for medical image analysis, aiming to improve diagnostic precision and treatment planning. He has published over twenty peer-reviewed papers in top-tier venues such as CVPR, ECCV, ICCV, ICLR, NeurIPS, AAAI, and others. He also served as an Area Chair for MICCAI and as the Chief Organizer of the AMOS22 and AMOS-MM challenges. 
+
+\noindent
+\textbf{\href{https://zhongying-deng.github.io/}{Zhongying Deng}} is a postdoctoral researcher at the University of Cambridge. His research interests include domain adaptation, semi-supervised learning, semantic segmentation, and medical image analysis. He serves as a reviewer for IEEE T-PAMI, IEEE T-IP, CVPR, ICCV, etc. He has published over twenty peer-reviewed papers, including these in top-tier journals and conferences. He organized the 1st and 2nd International Workshops on Foundation Models for General Medical AI (MedAGI) at MICCAI in 2023 and 2024. He also served as the editor for the workshop proceedings. %His team was the winner of the MICCAI autoPET 2022 Challenge.
+
+\noindent
+\textbf{\href{https://zhongying-deng.github.io/}{Xiangde Luo}} is a postdoctoral researcher at Stanford University specializing in developing clinically applicable AI tools and building public medical datasets and codebases, especially for oncology treatment. He organized challenges SegRap2023/SegRap2025 with MICCAI and MMIS-2024 in ACM-MM2024 and released large-scale abdominal organ segmentation datasets WORD and RAOS. He has published several top journals or conferences. He also serves as an Area Chair for MICCAI2025.
+
+\noindent
+\textbf{\href{https://yejin0111.github.io/}{Jin Ye}} is a Ph.D. student at Monash University, where he focuses on computer vision and deep learning for healthcare, aiming to develop intelligent solutions for medical image segmentation, generation, and disease diagnosis. He has published more than fourty papers, many in top-tier journals and conferences, including Nature Machine Intelligence, MIA, IEEE-TMI, Neurocomputing, CVPR, ECCV, NeurIPS, MICCAI, and others. Jin has won several international competitions, notably severn first-place in varous challenges. He has also served as an organizer for the MedAGI2024 workshop at MICCAI and the FUGC2025 challenge at ISBI.
+
+\noindent
+\textbf{\href{https://profiles.stanford.edu/xiyue-wang}{Xiyue Wang}} is a postdoctoral researcher at Stanford University, where she develops AI-driven computational pathology systems for precision oncology. Her research bridges computer vision and clinical medicine through three key innovations: pioneering self-supervised representation learning techniques for interpreting the tumor microenvironment, creating weakly supervised frameworks for whole-slide image analysis, and designing multimodal decision support systems integrating pathology data with clinical information. She has published as first and senior author in leading journals and conferences, including Nature, JCO, TMI, MedIA, and NeurIPS.
+
+\noindent
+\textbf{\href{https://lindan1128.github.io/}{Dan Lin}} is currently a postdoctoral researcher at Cornell University specializing in digital animal health. Her work focuses on leveraging multimodal data, including genomics, metagenomics, wearable time-series, and various physiological signals, to enable real-time animal health monitoring, enhance productivity and welfare, and assess zoonotic disease transmission risks. She has published over five peer-reviewed journal papers, with additional manuscripts currently under review.
+
+\noindent
+\textbf{\href{https://junjun2016.github.io/}{Junjun He}} is a researcher at Shanghai AI Laboratory, where he leads the General Medical AI group. His research focuses on foundation models and general medical AI.%, with notable contributions including large-scale pre-trained medical segmentation models (e.g., STUNet, SAM-Med2D, and SAM-Med3D) and large-scale medical multimodal evaluation benchmarks (GMAI-MMBench). %He obtained his Ph.D.  from Shanghai Jiao Tong University, China. 
+He has published peer-reviewed papers in international journals and conferences, including T-PAMI, TMI, CVPR, ICCV, ECCV, etc, accumulating over 4.5K citations. %He was one of the main contributors to MMSegmentation. He won several championships in medical image computing competitions such as ODIR19, AutoPET22, and FLARE22. 
+He also organized the 1st and the 2nd International Workshops on Foundation Models for General Medical AI (MedAGI) at MICCAI in 2023 and 2024.
+
+\noindent
+\textbf{\href{https://research.monash.edu/en/persons/jianfei-cai}{Jianfei Cai}} is a professor at the Faculty of Information Technology at Monash University, where he previously served as the inaugural Head of the Department of Data Science \& AI. % Before that, he was a full professor, a cluster deputy director of Data Science \& AI Research center (DSAIR), Head of Visual and Interactive Computing Division and Head of Computer Communications Division in Nanyang Technological University (NTU). 
+His research spans computer vision, multimedia, and medical image analysis, resulting in over 300 publications and 29,000+ citations. 
+% He is a co-recipient of paper awards in ACCV, ICCM, IEEE ICIP, and MMSP, and the winner of Monash FIT’s Dean's Researcher of the Year Award. 
+He has won paper awards at ACCV, ICCM, IEEE ICIP, and MMSP, as well as Monash FIT’s Dean's Researcher of the Year Award. 
+He is currently on the editorial board of TPAMI and IJCV. 
+He has served as an Associate Editor for IEEE T-IP, T-MM, and T-CSVT as well as serving as Area Chair for CVPR, ICCV, ECCV, ACM Multimedia, IJCAI, ICME, ICIP, and ISCAS. 
+He was the Chair of IEEE CAS VSPC-TC during 2016-2018. He also served as the leading TPC Chair for IEEE ICME 2012 and the best paper award committee chair/co-chair for IEEE T-MM 2020/2019. He was the leading General Chair for ACM Multimedia 2024 and a Fellow of IEEE.
+
+\noindent
+\textbf{\href{https://angelicaiaviles.wordpress.com/}{Angelica I Aviles-Rivero}} is an assistant professor at the Yau Mathematical Sciences Center, Tsinghua University. %Previously, she was a Senior Research Associate at the Department of Applied Mathematics and Theoretical Physics, University of Cambridge. She is a member of ELLIS. 
+Her research lies at the intersection of applied mathematics and machine learning.%, focusing on developing data-driven algorithmic techniques that enable computers to extract high-level understanding from vast datasets.
+She was elected as an SIAM officer, serving in 2022. 
+%She has extensive experience in organizing academic events. 
+She served as General Co-Chair for Medical Image Understanding and Analysis (MIUA) 2022 and WiMIUA 2022, and as a organizing committee member for the British Machine Vision Conference (BMVC) in 2022 and 2023. She also organized the Geometric Deep Learning in Medical Image Analysis in 2022 and was an organizing committee for the MICCAI Graph and Hypergraph Learning in Medical Image Analysis tutorial in 2023, 2024, and 2025. Additionally, she is the organizing committee for the MICCAI  MedAGI Workshop in 2024 and 2025. %she is the organizing committee for the MICCAI Workshop on Foundation Models for General Medical AI (MedAGI) in 2024 and 2025. 
+She is also a member of the organizing committee for MICCAI 2026, and is the General Co-Chair for the International Symposium on Biomedical Imaging (ISBI) in 2026.
+
+\noindent
+\textbf{\href{https://www.damtp.cam.ac.uk/person/cbs31}{Carola-Bibiane Schönlieb}} is a professor at the Department of Applied Mathematics and Theoretical Physics (DAMTP), University of Cambridge. She is the Head of the Cambridge Image Analysis Group, the Director of the Cantab Capital Institute for Mathematics of Information, and the Director of the Engineering and Physical Sciences Research Council Center for Mathematical and Statistical Analysis of Multimodal Clinical Imaging. Her research interests include variational methods, partial differential equations, machine learning for image analysis, image processing, and inverse imaging problems. She organized Medical Image Understanding and Analysis (MIUA) 2022, WiMIUA 2022, and MICCAI Graph and Hypergraph Learning in Medical Image Analysis Tutorials in 2023, 2024, and 2025.
+
+\noindent
+\textbf{\href{https://scholar.google.com/citations?user=oiBMWK4AAAAJ\&hl=zh-TW}{Shaoting Zhang}} is the head of Smart Health and the principal scientist at Shanghai Artificial Intelligence Laboratory. Before joining the lab, he was a tenured associate professor at UNC Charlotte. Dr. Zhang has been serving as an area chair or senior reviewer for major top conferences for over 15 years, including MICCAI, IEEE ISBI, IEEE CVPR, ICCV, ICML and NeurIPS, and for journals such as IEEE PAMI and TMI. Dr. Zhang is also on the editorial board of Medical Image Analysis (MedIA) and Neurocomputing. He was a guest editor of special issues in MedIA, Neurocomputing, Computerized Medical Imaging and Graphics.  He will be the program chair for IPMI 2025 and CVPR2026.
+
+\noindent
+\textbf{\href{http://luoping.me/}{Ping Luo}} is currently an associate professor at The University of Hong Kong. He has published 100+ peer-reviewed articles in top-tier conferences and journals in recent years with 70000+ citations. He has won a number of competitions and awards such as the first place in 2018 DAS Challenge for Autonomous Driving, 2022 ACL Outstanding Paper Award, and 2023 ICCV Best Paper Initial List. He was named one of the young innovators by the MIT Technology Review "Innovators Under 35" in Asia Pacific region.
+
+\input{src/tables/workshop_overview.tex}
+
+\subsection{List of invited speakers}
+
+\textbf{\href{https://people.cs.rutgers.edu/~dnm/}{Dimitris N. Metaxas}} (Comfirmed) is a Board of Governors and Distinguished Professor in the Department of Computer Science at Rutgers University, where he directs the Center for Computational Biomedicine, Imaging, and Modeling. He is a Fellow of IEEE, the American Institute of Medical and Biological Engineers, and the MICCAI Society. His research has been supported by agencies such as NSF, NIH, AFOSR, DARPA, HSARPA, and ONR. His research interests encompass artificial intelligence, machine learning, computer vision, medical image analysis, and computer graphics.
+
+
+\noindent
+\textbf{\href{https://dbmi.hms.harvard.edu/people/kun-hsing-yu}{Kun-Hsing Yu}} (Comfirmed) is an Assistant Professor in the Department of Biomedical Informatics at Harvard Medical School. He developed the first fully automated AI algorithm to extract thousands of features from whole-slide histopathology images, discovered the molecular mechanisms underpinning the microscopic phenotypes of tumor cells, and successfully identified previously unknown cellular morphologies associated with patient prognosis. His lab integrates cancer patients' multi-omics (genomics, epigenomics, transcriptomics, and proteomics) profiles with quantitative histopathology patterns to predict their clinical phenotypes. 
+
+
+\noindent
+\textbf{\href{https://ranger.uta.edu/~huang/}{Junzhou Huang}} (Tentative) is the Jenkins Garrett Professor in the Computer Science and Engineering department at the University of Texas at Arlington. He has been the director of the machine learning center at Tencent AI Lab. His research has been recognized by several awards including the NSF CAREER Award, Google TensorFlow Model Garden Award, Microsoft Accelerate Foundation Models Research Award, four Best Paper Awards (MICCAI'10, FIMH'11, STMI'12 and MICCAI'15) as well as two Best Paper Nominations (MICCAI'11 and MICCAI'14). Nokia). His major research interests include machine learning, computer vision, medical image analysis and bioinformatics.
+
+\noindent
+\textbf{\href{https://profiles.stanford.edu/akshay-chaudhari}{Akshay Chaudhari}} (Tentative) is an Assistant Professor of Radiology and Biomedical Data Science at Stanford University, currently serving as the Interim Division Chief of the Integrative Biomedical Imaging Informatics section. He leads the Machine Intelligence in Medical Imaging research group, focusing on enhancing medical image acquisition and analysis through advanced artificial intelligence techniques. His work has received recognition from the International Society for Magnetic Resonance in Medicine (ISMRM), including the W.S. Moore Young Investigator Award and the Junior Fellow Award.  His research interests include developing self-supervised and representation learning methods for multimodal deep learning in healthcare, integrating vision, language, and medical records data.
+
+
+
+\subsection{Diversity}
+Our organizer team and speakers consist of people of different races, genders, occupations, nationalities, sexual orientations, religious beliefs, and research directions. 
+For the organizing committee, our team spans different countries (China, USA, UK, Australia), with outstanding female members Dan Lin, Xiyue Wang, Angelica Aviles-Rivero, and Prof. Carola-Bibiane Schönlieb; covers various research areas, including medical image analysis, computer vision; encompasses diverse backgrounds, including industry (Junjun He, Shanghang Zhang). 
+%
+Our speakers, cover a range of research areas, including medical image analysis, computer vision, genomics, computational toxicology, bioinformatics. Tab.~\ref{tab:organizer_overview} and Tab.~\ref{tab:speaker_overview} briefly introduce each organizer and speaker in .
+
+
+\section{Format and logistics}
+\subsection{Schedule}
+This workshop will feature three key activities: (1) peer-reviewed papers, (2) invited talks covering various research domains.
+%
+The workshop schedule is as follows: The day begins with an introduction and opening remarks from 8:30 to 8:40, followed by two consecutive invited talks (each lasting 30 minutes) from 8:40 to 9:40. Next, there is the first oral session featuring four papers with 10 minutes allocated per paper, running from 9:40 to 10:20. A coffee break and poster session is then held from 10:20 to 10:50. The event resumes with another set of two invited talks (again, 30 minutes each) from 10:50 to 11:50, and is followed by a second oral session, where four papers are presented for 10 minutes each from 11:50 to 12:30. The day concludes with closing remarks from 12:30 to 12:35.
+
+\subsection{Paper submission}
+
+% \c{If including paper submissions: (a) Tentative program committee, (b), Paper review timeline, (c) Will these papers be published in proceedings? Note that paper submissions must adhere to the \conf paper submission style, format, and length restrictions, and organizers must meet a deadline (which is still to be determined) for providing the final documents to the publication chair to be included within the proceedings.}
+
+
+\subsubsection{Tentative program committee}
+Our Program Committee will oversee the review process for all submissions. The PC members are distinguished researchers with strong publication records in top-tier venues focusing on deep learning and medical image analysis. They also have extensive experience serving as reviewers and area chairs for leading conferences and journals. In addition, the PC will seek additional reviewers with extensive top-tier conference reviewing experience, ensuring that each submission is evaluated by at least three reviewers. 
+%
+After receiving initial reviews, authors will have a rebuttal period to address feedback, ensuring further refinement of their manuscripts. Following this, the PC and workshop chairs will make final decisions based on both the original submission and the rebuttal. 
+
+
+
+\subsubsection{Topics}
+The topic mainly includes, but is not strictly limited to, the following: (1) Medical Image Generation \& synthesis; (2) Vision-Language Foundation Models; (3) Clinical Workflow Intelligence; (4) Generative Disease Dynamics; (5) Trustworthy Medical AI; (6) LLM-Enhanced Clinical Reasoning; (7) Distributed Medical Imaging Systems; (8) Generative Surgical Simulation.
+
+\subsubsection{Timeline}
+We follow the below timeline: (1) Paper submission open: May 1, 2025; (2) Paper submission deadline: June 30, 2025; (3) (3) Notification of acceptance: July 15, 2025; (4) Camera-ready: July 25, 2025. (5) Main Conference (Workshop): October 21--23, 2025.
+
+% \zd{According to the \href{https://docs.google.com/document/d/1-s18vUhpwPEAobyPNN0tAr_QLN6qHdoUDa0tRAEM_cM/edit?tab=t.0#heading=h.dzaif0axhn9q}{FAQ} of ICCV, the camera ready deadline for workshop papers published in the proceedings is July 25th. Accepted paper information will be needed no later than June 27th.}
+
+
+
+
+
+
+
+\subsection{Competition}
+% \c{If the workshop hosts a competition, describe it: (a) Explain which datasets will be used, (b) Whether the datasets are already available or not; in the latter case, provide an estimate when the datasets will be available and describe your contingency plan in case of delays; (c) Ethical considerations for the datasets, (d) How submissions will be evaluated, (e) The timeline for the competition (start, submission deadline, decisions to participants). \cite{example2024}}
+Our workshop will not host a competition.
+
+\subsection{Special requests}
+% \c{State special space or equipment requests, if any.}
+
+We need a standard conference room with basic audio/visual equipment and conventional support for remote access and poster sessions.
+
+\section{Broader impacts}
+% \c{Tell us of any broader impacts around the topic (if any)}
+
+This workshop tackles key challenges in medical image analysis using generative AI. It brings together experts in computer vision, machine learning, and healthcare to foster interdisciplinary collaboration and explore both opportunities and hurdles in biomedical image analysis.
+%
+The topics are highly relevant not only to the ICCV audience but also to researchers, practitioners, and industry professionals worldwide. The workshop aims to drive advancements in medical data synthesis, clinical modeling, multimodal learning, and medical AI agents, which are critical to the future of generative AI in healthcare.
+%
+Moreover, the event offers a unique platform for researchers to present their work, receive constructive feedback, and engage directly with industry professionals. This dynamic exchange is expected to spark new collaborations, accelerate innovation, and promote the development of advanced technologies in medical image analysis.
+%
+%By gathering leading experts and thought leaders, the workshop provides a vital forum for discussing emerging trends, sharing insights, and addressing the most pressing challenges in the field. 
+It is an essential event for anyone interested in advancing research at the intersection of computer vision and medical imaging.
+
+\subsection{Social considerations}
+% \c{Tell us social considerations around the topic (if any)}
+
+Our workshop encourages discussion of the social implications of generative AI for medical image analysis. %. Although this technology can enhance diagnostic accuracy, streamline workflows, and broaden access to care, it also 
+This technology may raise concerns about bias, fairness, and equitable deployment. Medical datasets are often imbalanced across demographics, leading to models that perform well for some populations but not others. Addressing bias in training data, ensuring diverse representation, and developing adaptation techniques that prioritize fairness are critical to preventing AI-driven healthcare disparities. Moreover, AI solutions must remain accessible and cost-effective, particularly for under-resourced healthcare systems lacking the necessary infrastructure. These issues will be central to our workshop discussions.
+
+\subsection{Ethical considerations}
+% \c{Tell us ethical considerations around the topic (if any)}
+Our workshop welcomes submissions and discussions on ethical issues related to generative AI and biomedical image analysis. Key challenges include ensuring patient privacy, data security, and accountability in AI-assisted diagnoses. One topic to be discussed is the techniques of federated learning, differential privacy, and synthetic data generation to mitigate privacy risks while preserving data utility. %Since AI models rely on sensitive medical data, improper handling or re-identification risks could compromise patient confidentiality. Techniques such as federated learning, differential privacy, and synthetic data generation can mitigate these risks while preserving data utility. 
+Furthermore, the potential misuse of AI-generated medical images for fraudulent activities necessitates strict regulatory oversight and ethical guidelines. Another challenge is determining liability in AI-assisted decision-making—whether responsibility lies with the AI developer, the clinician, or the institution. Maintaining human oversight, ensuring transparency in AI predictions, and adhering to medical ethics are essential for building trust in AI-powered healthcare.
+
+
+\section{Relationship to previous workshops}
+% \c{Describe how this proposal relates to previous workshops held at CVPR/ICCV/ECCV/etc. in the last three years.}
+% \x
+
+Previous or concurrent workshops on generative AI include Workshops on (1) \href{https://cvpr.thecvf.com/virtual/2024/workshop/23674}{Responsible Generative AI at CVPR 2024} and \href{https://sites.google.com/view/cvpr-responsible-genai}{2025}, (2) \href{https://icml.cc/virtual/2024/workshop/29958}{Generative AI and Law at ICML 2024}, (3) \href{https://neurips.cc/virtual/2024/workshop/84705}{Safe Generative AI at NeurIPS 2024}, and (4) \href{https://aaai.org/conference/aaai/aaai-25/workshop-list/}{Generative AI for Health at AAAI 2025}.
+Our workshop differentiates itself from previous and concurrent generative AI workshops in three key aspects: focus area, technical scope, and target audience.
+
+ \textbf{Distinct Focus Area}. Unlike Workshops (1)-(3), which explore generative AI in the context of law, education, and economics, our workshop is exclusively dedicated to biomedical image analysis. While Workshop (4) at AAAI 2025 also focuses on generative AI in healthcare, it takes a broader perspective on medical applications, whereas our workshop is specifically tailored to biomedical image analysis, ensuring deeper engagement with ICCV's vision and medical imaging community.
+
+\textbf{Expanded Technical Scope}. Our workshop goes beyond multi-modal models, which are a key focus of Workshop (4), by actively encouraging research and discussions on biomedical image synthesis and AI agents. It thus reflects the latest advancements in generative AI, e.g., diffusion models, self-supervised learning, and reinforcement learning-based AI agents, making it more comprehensive in covering cutting-edge developments.
+
+\textbf{Alignment with the ICCV Community}. While Workshop (4) targets general healthcare AI, our workshop is designed specifically for the computer vision community. It highlights biomedical image analysis, generative models for vision tasks, and domain-specific challenges in medical imaging, ensuring stronger relevance to ICCV attendees who are primarily engaged in computer vision and medical imaging research.
+
+
+By emphasizing biomedical image synthesis, AI agents, and deep integration with computer vision, our workshop provides a unique platform for advancing generative AI in medical imaging, distinguishing it from other ongoing workshops.
+
+%https://sites.google.com/view/cvpr-responsible-genai (2024 and 2025 CVPR workshop on responsible generative AI)
+
+%https://icml.cc/virtual/2024/workshop/29958 (Generative AI and Law)
+
+%https://neurips.cc/virtual/2024/workshop/84705 (Safe Generative AI)
+
+%https://aaai.org/conference/aaai/aaai-25/workshop-list/. %（AAAI的W8, W13, W14, W42都是关于Generative AI的workshop,其中W42是关于Generative AI for health的）
+%W42 focuses on ` Issues around fairness, trust, clinical validation, and bias mitigation are central to this discussion. How can we ensure that these models are transparent, ethical, and comply with regulatory standards? What strategies can mitigate inherent biases and build trust with both clinicians and patients? '
+
+\bibliography{references}  % references.bib 是您的参考文献数据库文件
+
+\clearpage
+\appendix
+\section{Appendix}
+
+\input{src/tables/organizer.tex}
+\input{src/tables/speaker.tex}
+
+\end{document}

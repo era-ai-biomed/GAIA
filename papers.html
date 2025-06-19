@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>GAIA Workshop@ICCV25</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link href="data/default.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" type="image/png" href="./data/gaia_logo.png" />
+    <!-- <link rel="icon" type="image/png" href="./data/gaia_logo.png" /> -->
+    <meta property='og:title' content='GAIA: Generative AI for Biomedical Image Analysis @ ICCV25'/>
+    <meta property='og:url' content='https://gaia-workshop.github.io/' />
+    <meta property="og:type" content="website" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        function moreOrLess(tableData) {
+            obj = tableData.find("span");
+            button = tableData.find("button");
+            console.log(obj.hasClass("hidden"))
+            if (obj.hasClass("hidden")) {
+                obj.slideDown("fast");
+                obj.removeClass("hidden");
+                button.html("Hide Abstract");
+            } else {
+                obj.slideUp("fast");
+                obj.addClass("hidden");
+                button.html("Show Abstract");
+            }
+        }
+    </script>
+  </head>
+
+  <body>
+    <div id="header">
+      <div id="logo">
+          <h1 style="font-size: 24px;">
+		<center>
+	    	 <span style="font-size:70%;color:#777;font-weight:normal">The First Workshop on</span><br>
+             Generative AI for Biomedical Image Analysis:<br>
+             <span style="font-size:85%;color:#777;font-weight:normal">Opportunities, Challenges and Futures (GAIA)</span>
+             
+		</center>
+      </h1><br>
+  <div class="my-image-box-header">
+   <center>
+    <img src="data/gaia_logo.png" width="600" height="200" style="border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" alt="GAIA Workshop Logo">
+  </center>
+    
+  </div>
+  <h2 style="font-size: 18px; border: none; padding: 10px 0;">
+    <center>
+      <span style="font-size:110%;color:#777;font-weight:normal">
+          <a href="https://iccv2025.thecvf.com/" target="_blank">ICCV 2025 @ Honolulu, Hawaii</a>  </span>
+          <br>
+      <span style="font-size:110%;color:#666;font-weight:normal">Date and Location TBD</span>
+      <br>
+      <span style="font-size:110%;color:#666;font-weight:normal">Half Day Workshop</span>
+      <!-- <span style="font-size:92%;color:#777;font-weight:bold">In Person</span><br> -->
+      <!-- <span style="font-size:130%;color:#777;font-weight:bold">East 18@Vancouver Convention Center</span>       -->
+    </center>
+    </h2><br>
+</div>
+  
+    <div id="menu">
+    <center>
+      <ul>
+        <li class="first"><a href="./index.html" accesskey="1">Home</a></li>
+      </ul>
+    </center>
+</div>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+              mybutton.style.display = "block";
+                } else {
+                        mybutton.style.display = "none";
+                          }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+      document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+}
+</script>
+
+
+        <div id="content">
+
+<center>
+            <h2>Accepted Papers</h2>
+            <p>Paper submissions will be available after the submission deadline.</p>
+            <p>Please check back for updates on accepted papers.</p>
+
+</center>
+
+<div style="clear: both;">&nbsp;</div>
+</div><br><br>
+
+</body>
+</html>

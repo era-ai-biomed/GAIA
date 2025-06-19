@@ -1,62 +1,290 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GIGA Workshop</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>GIGA Workshop</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#schedule">Schedule</a></li>
-                <li><a href="#materials">Materials</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>GAIA Workshop@ICCV25</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link href="data/default.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" type="image/png" href="./data/gaia_logo.png" />
+    <meta property='og:title' content='GAIA: Generative AI for Biomedical Image Analysis @ ICCV25'/>
+    <meta property='og:url' content='https://gaia-workshop.github.io/' />
+    <meta property="og:type" content="website" />
+  </head>
 
-    <main>
-        <section id="about">
-            <h2>About the Workshop</h2>
-            <p>Welcome to the GIGA Workshop! This workshop focuses on [workshop description here].</p>
-        </section>
+  <body>
+    <div id="header">
+      <div id="logo">
+	<h1 style="font-size: 24px;">
+		<center>
+	    	 <span style="font-size:70%;color:#777;font-weight:normal">The First Workshop on</span><br>
+             Generative AI for Biomedical Image Analysis:<br>
+             <span style="font-size:85%;color:#777;font-weight:normal">Opportunities, Challenges and Futures (GAIA)</span>
+             
+		</center>
+	</h1><br>
+  <!-- <div class="my-image-box-header"> -->
+   <center>
+    <img src="data/gaia_logo.png" width="600" height="200" style="border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" alt="GAIA Workshop Logo">
+  </center>
+    
+  <!-- </div> -->
+  <h2 style="font-size: 18px; border: none; padding: 10px 0;">
+    <center>
+      <span style="font-size:110%;color:#777;font-weight:normal">
+          <a href="https://iccv2025.thecvf.com/" target="_blank">ICCV 2025 @ Honolulu, Hawaii</a>  </span>
+          <br>
+      <span style="font-size:110%;color:#666;font-weight:normal">Date and Location TBD</span>
+      <br>
+      <span style="font-size:110%;color:#666;font-weight:normal">Half Day Workshop</span>
+      <!-- <span style="font-size:92%;color:#777;font-weight:bold">In Person</span><br> -->
+      <!-- <span style="font-size:130%;color:#777;font-weight:bold">East 18@Vancouver Convention Center</span>       -->
+    </center>
+    </h2><br>
+</div>
 
-        <section id="schedule">
-            <h2>Schedule</h2>
-            <div class="schedule-item">
-                <h3>Day 1</h3>
-                <ul>
-                    <li>9:00 - 10:00: Introduction</li>
-                    <li>10:00 - 12:00: Session 1</li>
-                    <li>12:00 - 13:00: Lunch Break</li>
-                    <li>13:00 - 16:00: Session 2</li>
-                </ul>
-            </div>
-            <!-- Add more days as needed -->
-        </section>
+<div id="menu">
+    <center>
+      <ul>
+        <li><a href="#speakers">Speakers</a></li>
+        <li><a href="#schedule">Schedule</a></li>
+        <li><a href="./papers.html" accesskey="3">Papers</a></li>
+        <li><a href="#cfp">Call for Papers</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </center>
+</div>
 
-        <section id="materials">
-            <h2>Materials</h2>
-            <p>Workshop materials will be available here.</p>
-            <ul>
-                <li><a href="#">Slides</a></li>
-                <li><a href="#">Handouts</a></li>
-                <li><a href="#">Code samples</a></li>
-            </ul>
-        </section>
 
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>For more information, please contact: [your contact information]</p>
-        </section>
-    </main>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
-    <footer>
-        <p>&copy; 2023 GIGA Workshop. All rights reserved.</p>
-    </footer>
+	<div id="content">
+<h2>News</h2>
+<!-- <img alt src="new.gif" height="15"/> -->
+<p>
+<ul>
+  <li>  [TBD] Workshop website launched with <a href="#cfp">Call-for-Papers</a> and <a href="#speakers">speakers</a> announced.  </li>
+  <li>  [TBD] Paper submission site will be available soon. </li>
+  <li>  [TBD] Paper submission deadline: June 30, 2025. </li>
+  <li>  [TBD] Workshop date and location to be announced. </li>
+</ul>
+</p>
+
+
+<h2>Introduction</h2>
+
+<p>Generative AI is transforming biomedical image analysis, creating new possibilities and solutions for healthcare. Although generative AI has significantly advanced medical imaging and diagnostics, developing reliable, clinically applicable systems remains challenging due to interpretability concerns, data quality issues, and regulatory compliance.</p>
+
+<p>This workshop explores how generative AI is reshaping biomedical image analysis across three critical areas:</p>
+
+<p><strong>(1) Data Synthesis and Clinical Modeling:</strong> Generative models revolutionize training data creation and disease simulation by producing anatomically accurate images, addressing class imbalances, and enabling cross-modal image synthesis (e.g., MRI to CT). These models also simulate disease progression, empowering clinicians to visualize patient outcomes and evaluate treatment effectiveness. Additionally, conditional generative models enhance segmentation accuracy, while synthetic lesion generation enriches training datasets. Ensuring clinical reliability, reducing biases, and meeting regulatory standards remain essential challenges.</p>
+
+<p><strong>(2) Multimodal Learning:</strong> Integrating generative AI with large language models (LLMs) combines visual data with insights from medical reports and electronic health records, enabling systems to extract crucial information and generate informative summaries. This fusion enhances clinical communication and supports improved decision-making. However, significant challenges, such as interpretability, mitigating AI-generated inaccuracies, and aligning with clinical standards, must be addressed.</p>
+
+<p><strong>(3) Workflow Automation:</strong> Generative AI streamlines medical imaging workflows from acquisition to diagnosis. Intelligent AI agents automate tasks such as routine medical inspections, automated image analysis, and automated delineation of radiotherapy target areas. These advancements can significantly improve efficiency and consistency in clinical practices. Nevertheless, challenges related to regulatory approval, data privacy, and model reliability persist.</p>
+
+<p>Our workshop brings together experts from computer vision, healthcare, and AI research to address these challenges and opportunities in applying generative AI to biomedical image analysis through interdisciplinary collaboration.</p>
+	
+<!-- <h2 id="speakers">Invited Speakers (Check out the <a href="./schedule.html">Full Schedule</a>)</h2> -->
+<h2 id="speakers">Invited Speakers</h2>
+<center>
+
+<table style="width:100%; table-layout: fixed; border-spacing: 20px 15px;">
+<tr>
+<td style="width:50%; text-align:center; vertical-align:top; padding: 10px;"><a href="https://people.cs.rutgers.edu/~dnm/" target="_blank"> [Photo TBD] </a></td>
+<td style="width:50%; text-align:center; vertical-align:top; padding: 10px;"><a href="https://dbmi.hms.harvard.edu/people/kun-hsing-yu" target="_blank"> [Photo TBD] </a></td>
+</tr>
+<tr>
+<td style="text-align:center; vertical-align:top; padding: 5px 10px;"><h3>Dimitris N. Metaxas</h3></td>
+<td style="text-align:center; vertical-align:top; padding: 5px 10px;"><h3>Kun-Hsing Yu</h3></td>
+</tr>
+<tr>
+<td style="text-align:center; vertical-align:top; padding: 5px 10px;"><font size="2">Distinguished Professor<br>Rutgers University</font></td>
+<td style="text-align:center; vertical-align:top; padding: 5px 10px;"><font size="2">Assistant Professor<br>Harvard Medical School</font></td>
+</tr>
+<tr><td colspan="2" style="height:40px;"></td></tr>
+
+<tr>
+<td style="text-align:center; vertical-align:top; padding: 10px;"><a href="https://ranger.uta.edu/~huang/" target="_blank"> [Photo TBD] </a></td>
+<td style="text-align:center; vertical-align:top; padding: 10px;"><a href="https://profiles.stanford.edu/akshay-chaudhari" target="_blank"> [Photo TBD] </a></td>
+</tr>
+<tr>
+<td style="text-align:center; vertical-align:top; padding: 5px 10px;"><h3>Junzhou Huang</h3></td>
+<td style="text-align:center; vertical-align:top; padding: 5px 10px;"><h3>Akshay Chaudhari</h3></td>
+</tr>
+<tr>
+<td style="text-align:center; vertical-align:top; padding: 5px 10px;"><font size="2">Jenkins Garrett Professor<br>University of Texas at Arlington</font></td>
+<td style="text-align:center; vertical-align:top; padding: 5px 10px;"><font size="2">Assistant Professor<br>Stanford University</font></td>
+</tr>
+
+</table>
+</center>
+
+<!-- (Check out the <a href="./papers.html">Accepted Papers</a>) -->
+<h2 id="cfp">Call for Papers </h2>
+<p>
+  We invite submissions of full-length papers (8 pages excluding the references) for workshop proceedings. The topics covered in the workshop include but are not limited to:
+</p>
+  <p>
+      <ul>
+        <li>Medical Image Generation & Synthesis</li>
+        <li>Vision-Language Foundation Models</li>
+        <li>Clinical Workflow Intelligence</li>
+        <li>Generative Disease Dynamics</li>
+        <li>Trustworthy Medical AI</li>
+        <li>LLM-Enhanced Clinical Reasoning</li>
+        <li>Distributed Medical Imaging Systems</li>
+        <li>Generative Surgical Simulation</li>
+        <li>Multimodal learning for medical image analysis</li>
+        <li>AI agents for healthcare applications</li>
+  </ul>
+  </p>
+
+<h3>Submission Instructions</h3>  
+<p>
+  All submissions should follow the ICCV 2025 instructions. The papers will be subject to a <b>double-blind</b> review process, i.e. authors must not identify themselves on the submitted papers. The reviewing process is single-stage without rebuttals. 
+</p>
+
+<div style="text-align: center; margin: 20px 0;">
+  <a href="#" target="_blank" style="
+    display: inline-block;
+    background-color: #2d4bcb;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  " onmouseover="this.style.backgroundColor='#1e3a99'" onmouseout="this.style.backgroundColor='#2d4bcb'">
+    📝 Submit Your Paper
+  </a>
+  <p style="font-size: 12px; color: #666; margin-top: 10px;">
+    Submission system will be available soon
+  </p>
+</div>
+
+<ul>
+  <li>Online Submission System: Will be announced soon</li>
+  <li>Submission Format: <a href="https://iccv.thecvf.com/Conferences/2025/AuthorGuidelines" target="_blank">official ICCV 2025 template</a> (double column; no more than 8 pages, excluding reference).</li>
+</ul>
+  <p>
+    All authors submitting a paper are required to have an OpenReview profile.
+    New profiles with institutional emails are automatically activated, while those without one undergo a moderation process, taking up to two weeks.
+  </p>
+
+  <h2>Timeline Table (11:59 PM, Pacific Time)</h2>
+  <ul>
+      <li>Paper submission open: <b>May 1,</b> 2025</li>
+      <li>Paper submission deadline: <b>June 30,</b> 2025</li>
+      <li>Notification to authors: <b>July 15,</b> 2025</li>
+      <li>Camera-ready deadline: <b>July 25,</b> 2025</li>
+      <li>Workshop: <b>October 21-23,</b> 2025</li>
+    </ul>
+
+<h2 id="schedule">Workshop Schedule</h2>
+<p>Detailed schedule will be announced soon. The workshop will feature:</p>
+<ul>
+    <li>Invited talks by leading experts in the field</li>
+    <li>Oral presentations of accepted papers</li>
+    <li>Poster session for paper presentations</li>
+    <li>Panel discussion on future directions</li>
+</ul>
+
+<h2 id="organizers">Workshop Organizers</h2>
+<center>
+
+<table style="width:100%; table-layout: fixed; border-spacing: 20px 15px;">
+<tr>
+<td style="width:33.33%; text-align:center; vertical-align:top; padding: 10px;"><a href="https://jiyuanfeng.github.io/" target="_blank"> [Photo TBD] </a></td>
+<td style="width:33.33%; text-align:center; vertical-align:top; padding: 10px;"><a href="https://zhongying-deng.github.io/" target="_blank"> [Photo TBD] </a></td>
+<td style="width:33.33%; text-align:center; vertical-align:top; padding: 10px;"><a href="https://luoxd1996.github.io/" target="_blank"> [Photo TBD] </a></td>
+</tr>
+<tr>
+<td style="text-align:center; vertical-align:top; padding: 5px 10px;"><h3>Yuanfeng Ji</h3></td>
+<td style="text-align:center; vertical-align:top; padding: 5px 10px;"><h3>Zhongying Deng</h3></td>
+<td style="text-align:center; vertical-align:top; padding: 5px 10px;"><h3>Xiangde Luo</h3></td>
+</tr>
+<tr>
+<td style="text-align:center; vertical-align:top; padding: 5px 10px;"><font size="2">Postdoctoral Researcher<br>Stanford University</font></td>
+<td style="text-align:center; vertical-align:top; padding: 5px 10px;"><font size="2">Postdoctoral Researcher<br>University of Cambridge</font></td>
+<td style="text-align:center; vertical-align:top; padding: 5px 10px;"><font size="2">Postdoctoral Researcher<br>Stanford University</font></td>
+</tr>
+<tr><td colspan="3" style="height:40px;"></td></tr>
+
+<tr>
+<td style="text-align:center; vertical-align:top; padding: 10px;"><a href="https://yejin0111.github.io/" target="_blank"> [Photo TBD] </a></td>
+<td style="text-align:center; vertical-align:top; padding: 10px;"><a href="https://profiles.stanford.edu/xiyue-wang" target="_blank"> [Photo TBD] </a></td>
+<td style="text-align:center; vertical-align:top; padding: 10px;"><a href="https://lindan1128.github.io/" target="_blank"> [Photo TBD] </a></td>
+</tr>
+<tr>
+<td style="text-align:center; vertical-align:top; padding: 5px 10px;"><h3>Jin Ye</h3></td>
+<td style="text-align:center; vertical-align:top; padding: 5px 10px;"><h3>Xiyue Wang</h3></td>
+<td style="text-align:center; vertical-align:top; padding: 5px 10px;"><h3>Dan Lin</h3></td>
+</tr>
+<tr>
+<td style="text-align:center; vertical-align:top; padding: 5px 10px;"><font size="2">Ph.D. Student<br>Monash University</font></td>
+<td style="text-align:center; vertical-align:top; padding: 5px 10px;"><font size="2">Postdoctoral Researcher<br>Stanford University</font></td>
+<td style="text-align:center; vertical-align:top; padding: 5px 10px;"><font size="2">Postdoctoral Researcher<br>Cornell University</font></td>
+</tr>
+<tr><td colspan="3" style="height:40px;"></td></tr>
+
+<tr>
+<td style="text-align:center; vertical-align:top; padding: 10px;"><a href="https://junjun2016.github.io/" target="_blank"> [Photo TBD] </a></td>
+<td style="text-align:center; vertical-align:top; padding: 10px;"><a href="https://research.monash.edu/en/persons/jianfei-cai" target="_blank"> [Photo TBD] </a></td>
+<td style="text-align:center; vertical-align:top; padding: 10px;"><a href="https://angelicaiaviles.wordpress.com/" target="_blank"> [Photo TBD] </a></td>
+</tr>
+<tr>
+<td style="text-align:center; vertical-align:top; padding: 5px 10px;"><h3>Junjun He</h3></td>
+<td style="text-align:center; vertical-align:top; padding: 5px 10px;"><h3>Jianfei Cai</h3></td>
+<td style="text-align:center; vertical-align:top; padding: 5px 10px;"><h3>Angelica I Aviles-Rivero</h3></td>
+</tr>
+<tr>
+<td style="text-align:center; vertical-align:top; padding: 5px 10px;"><font size="2">Researcher<br>Shanghai AI Laboratory</font></td>
+<td style="text-align:center; vertical-align:top; padding: 5px 10px;"><font size="2">Professor<br>Monash University</font></td>
+<td style="text-align:center; vertical-align:top; padding: 5px 10px;"><font size="2">Assistant Professor<br>Tsinghua University</font></td>
+</tr>
+<tr><td colspan="3" style="height:40px;"></td></tr>
+
+<tr>
+<td style="text-align:center; vertical-align:top; padding: 10px;"><a href="https://www.damtp.cam.ac.uk/person/cbs31" target="_blank"> [Photo TBD] </a></td>
+<td style="text-align:center; vertical-align:top; padding: 10px;"><a href="https://scholar.google.com/citations?user=oiBMWK4AAAAJ&hl=zh-TW" target="_blank"> [Photo TBD] </a></td>
+<td style="text-align:center; vertical-align:top; padding: 10px;"><a href="http://luoping.me/" target="_blank"> [Photo TBD] </a></td>
+</tr>
+<tr>
+<td style="text-align:center; vertical-align:top; padding: 5px 10px;"><h3>Carola-Bibiane Schönlieb</h3></td>
+<td style="text-align:center; vertical-align:top; padding: 5px 10px;"><h3>Shaoting Zhang</h3></td>
+<td style="text-align:center; vertical-align:top; padding: 5px 10px;"><h3>Ping Luo</h3></td>
+</tr>
+<tr>
+<td style="text-align:center; vertical-align:top; padding: 5px 10px;"><font size="2">Professor<br>University of Cambridge</font></td>
+<td style="text-align:center; vertical-align:top; padding: 5px 10px;"><font size="2">Principal Scientist<br>Shanghai AI Laboratory</font></td>
+<td style="text-align:center; vertical-align:top; padding: 5px 10px;"><font size="2">Associate Professor<br>University of Hong Kong</font></td>
+</tr>
+
+</table>
+</center>
+
+<h2 id="sponsor">Sponsors</h2>
+<p>
+Sponsor information will be available soon.
+</p>
+
+<br><br><br><br>
+<h3 id="contact">Contact Info</h2>
+<p>E-mail: 
+<a href="mailto:yfj@stanford.edu" target="_blank">yfj@stanford.edu</a>
+</p>
+
+ <h3 id="sponsor">Acknowledgement</h2>
+<p>Website template borrowed from: 
+<a href="https://rhobin-challenge.github.io/" target="_blank">https://rhobin-challenge.github.io/</a>
+</p>
+
+
+<div style="clear: both;">&nbsp;</div>
+</div><br><br>
+
 </body>
-</html> 
+</html>
+

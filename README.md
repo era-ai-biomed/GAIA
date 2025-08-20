@@ -64,6 +64,7 @@ Your site will be published at `https://[your-username].github.io/GIGA/`
 - Paper submission deadline: June 30, 2025
 - Notification to authors: July 15, 2025
 - Camera-ready deadline: July 25, 2025
+- Extended deadline: August 30, 2025
 - Workshop: October 21-23, 2025
 
 ## Topics
